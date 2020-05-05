@@ -57,6 +57,9 @@ export default class extends React.Component {
                         <label htlmlfor="name-input">Breed Name:</label><input type="text" id="name-input" value={this.state.userInput.name} onChange={this.nameChanged} />
                     </div>
                     <div>
+                        <label htmlfor="url-input">Organization URL (USA):</label><input type="text" id="url-input" value={this.state.userInput.url} onChange={this.urlChanged} />
+                    </div>
+                    <div>
                         <label htlmlfor="shedding-input">Shedding:</label>
                         <select id="shedding-input" value={this.state.userInput.shedding} onChange={this.sheddingChanged}>
                             <option value="">Make a Selection</option>

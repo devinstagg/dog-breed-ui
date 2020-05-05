@@ -9,27 +9,26 @@ import './App.css';
 import Manage from './Pages/Manage';
 import View from './Pages/View'
 
+
 export default class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          <nav>
-            <p>
-              <Link to="/">Manage</Link>
-            </p>
-            <p>
-              <Link to="/view">View</Link>
-            </p>
-          </nav>
-          <hr />
+      <Router>  
+      <nav className="main-nav"> 
+                <text className="nav-link">Dog Breed Database</text>
+                <Link className="nav-link" to="/">Manage</Link>
+                <Link className="nav-link" to="/view">View</Link>
+      </nav>
+        <div className="main-content">
           <Switch>
             <Route exact path="/" component={Manage} />
             <Route path="/view" component={View} />
           </Switch>
         </div>
+
       </Router>
+
     )
   }
 }
