@@ -16,7 +16,7 @@ export default class App extends Component {
     return (
       <Router>  
       <nav className="main-nav"> 
-                <text className="nav-link">Dog Breed Database</text>
+                <text className="nav-link">Dog Breeds</text>
                 <Link className="nav-link" to="/">Manage</Link>
                 <Link className="nav-link" to="/view">View</Link>
       </nav>

@@ -1,4 +1,4 @@
-.App {
+.main-content {
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .nav-link:hover {
-  color: #f3f3f3
+  color: #d6d6d6; 
 }
 
 .main-content {

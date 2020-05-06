@@ -4,7 +4,8 @@ export default class extends React.Component {
     render() {
         return (
             <div>
-                <h1>View</h1>
+                <h1>All Dog Breeds</h1>
+                
             </div>
         );
     }
