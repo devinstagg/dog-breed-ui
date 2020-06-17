@@ -8,6 +8,9 @@ import {
 import './App.css';
 import Manage from './Pages/Manage';
 import View from './Pages/View'
+require('dotenv').config()
+
+
 
 
 export default class App extends Component {
