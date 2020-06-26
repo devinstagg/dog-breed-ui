@@ -54,13 +54,13 @@ export default class extends React.Component {
                 <h1>Manage</h1>
                 <section className="form">
                     <div>
-                        <label htlmlfor="name-input">Breed Name:</label><input type="text" id="name-input" value={this.state.userInput.name} onChange={this.nameChanged} />
+                        <label htmlFor="name-input">Breed Name:</label><input type="text" id="name-input" value={this.state.userInput.name} onChange={this.nameChanged} />
                     </div>
                     <div>
-                        <label htmlfor="url-input">Organization URL (USA):</label><input type="text" id="url-input" value={this.state.userInput.url} onChange={this.urlChanged} />
+                        <label htmlFor="url-input">Organization URL (USA):</label><input type="text" id="url-input" value={this.state.userInput.url} onChange={this.urlChanged} />
                     </div>
                     <div>
-                        <label htlmlfor="shedding-input">Shedding:</label>
+                        <label htlmlFor="shedding-input">Shedding:</label>
                         <select id="shedding-input" value={this.state.userInput.shedding} onChange={this.sheddingChanged}>
                             <option value="">Make a Selection</option>
                             <option value="low">Low</option>
@@ -69,7 +69,7 @@ export default class extends React.Component {
                         </select>
                     </div>
                     <div>
-                        <label htlmlfor="blows-coat-input">Blows Coat Seasonally:</label>
+                        <label htlmlFor="blows-coat-input">Blows Coat Seasonally:</label>
                         <select id="blows-coat-input" value={this.state.userInput.blowsCoat} onChange={this.blowsCoatChanged}>
                             <option value="">Make a Selection</option>
                             <option value="yes">Yes</option>

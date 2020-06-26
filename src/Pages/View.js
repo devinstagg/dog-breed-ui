@@ -5,6 +5,15 @@ require('dotenv').config()
 
 export default class extends React.Component {
 
+    showAllBreeds = () => {
+        return this.state.dogBreeds.map((dogBreed) => {
+            return (
+                <div key={dogBreed._id}>
+                    <h2>{dogBreed.breed}</h2>
+                </div>
+            )
+        })
+    }
 
     getAllBreeds = async () => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/all-breeds`, {
@@ -13,7 +22,7 @@ export default class extends React.Component {
             headers: {
                 'accept': 'application/json'
             }
-        }) 
+        })
         const successfulGet = response.status === 200 || 304
 
         if (successfulGet) {
@@ -27,8 +36,6 @@ export default class extends React.Component {
         this.getAllBreeds()
     }
 
-    
-
     render() {
         return (
             <div>
@@ -37,7 +44,7 @@ export default class extends React.Component {
                     <p>(Sorted in Alphabetical Order)</p>
                 </span>
                 <span className="dog-block">
-                    <p></p>
+                    <p>{this.showAllBreeds()}</p>
                 </span>
             </div>
         );
