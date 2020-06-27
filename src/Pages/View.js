@@ -5,11 +5,22 @@ require('dotenv').config()
 
 export default class extends React.Component {
 
+    state = {
+        dogBreeds: [],
+    }
+
+
+
     showAllBreeds = () => {
         return this.state.dogBreeds.map((dogBreed) => {
             return (
-                <div key={dogBreed._id}>
+                <div key={dogBreed._id} className="breed-box">
                     <h2>{dogBreed.breed}</h2>
+                    <a href={dogBreed.url}>{dogBreed.breed} Website</a>
+                    <p>Average Weight – Male</p>
+                    {dogBreed.maleWeightLow} to {dogBreed.maleWeightHigh}
+                    <p>Average Weight – Female</p>
+
                 </div>
             )
         })
@@ -44,7 +55,7 @@ export default class extends React.Component {
                     <p>(Sorted in Alphabetical Order)</p>
                 </span>
                 <span className="dog-block">
-                    <p>{this.showAllBreeds()}</p>
+                    <div>{this.showAllBreeds()}</div>
                 </span>
             </div>
         );
