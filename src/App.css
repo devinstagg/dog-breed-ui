@@ -1,14 +1,38 @@
+/*Main Content & Master Styles*/
+
 .main-content {
   text-align: center;
   padding-top: 25px;
 }
 
+
+/*Breed Specific Styling*/
+
 .breed-box {
   background-color: #f7f7f7;
+  padding: 25px;
+}
+
+.breed-website {
+  padding-bottom: 10px;
+}
+
+.weights{
+  font-weight: 600;
+}
+
+.breed-box p {
+  text-transform: capitalize;
+}
+
+.breed-box h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
 
+/*Navigation Styling*/
 
 .main-nav {
   background-color: #00afcc;

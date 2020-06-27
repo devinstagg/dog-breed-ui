@@ -14,14 +14,28 @@ export default class extends React.Component {
     showAllBreeds = () => {
         return this.state.dogBreeds.map((dogBreed) => {
             return (
-                <div key={dogBreed._id} className="breed-box">
+                <section key={dogBreed._id} className="breed-box">
                     <h2>{dogBreed.breed}</h2>
-                    <a href={dogBreed.url}>{dogBreed.breed} Website</a>
-                    <p>Average Weight – Male</p>
-                    {dogBreed.maleWeightLow} to {dogBreed.maleWeightHigh}
-                    <p>Average Weight – Female</p>
-
-                </div>
+                    <p className="breed-website"><a href={dogBreed.url} target="_blank" rel="noopener noreferrer">{dogBreed.breed}  Website</a></p>
+                    <p className="weights">Average Weight – Male (in pounds)</p> 
+                    <p>{dogBreed.maleWeightLow} to {dogBreed.maleWeightHigh}</p>
+                    <p className="weights">Average Weight – Female (in pounds)</p>
+                    {dogBreed.femaleWeightLow} to {dogBreed.femaleWeightHigh}
+                    <h3>Attributes</h3>
+                    <p>Shedding: {dogBreed.shedding}</p>
+                    <p>Blows Coat? {dogBreed.blowsCoat}</p>
+                    <p>Professional Grooming Needed: {dogBreed.professionalGrooming}</p>
+                    <p>Grooming Needs (brushing, combing, etc.): {dogBreed.grooming}</p>
+                    <p>Friendly to Cats? {dogBreed.likelyCatFriendly}</p>
+                    <p>Exercise Needs: {dogBreed.exercise}</p>
+                    <p>Biddability (aka, Trainability): {dogBreed.biddability}</p>
+                    <p>Prey Drive (hunting, chasing, etc.): {dogBreed.preyDrive}</p>
+                    <p>Barking/Vocality: {dogBreed.barking}</p>
+                    <h3>Main Drives</h3>
+                   <p>{dogBreed.mainDrive}</p>
+                    <h3>Activities</h3>
+                    <p>{dogBreed.activities}</p>
+                </section>
             )
         })
     }
