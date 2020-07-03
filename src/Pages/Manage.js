@@ -1,4 +1,6 @@
 import React from 'react'
+require('dotenv').config()
+
 
 export default class extends React.Component {
     state = {
