@@ -19,12 +19,13 @@ export default class extends React.Component {
                 <section key={dogBreed._id} className="breed-box">
                     <h2>{dogBreed.breed}</h2>
                     <p className="breed-website"><a href={dogBreed.url} target="_blank" rel="noopener noreferrer">{dogBreed.breed}  Website</a></p>
-                    <p className="weights">Average Weight – Male (in pounds)</p> 
-                    <p>{dogBreed.maleWeightLow} to {dogBreed.maleWeightHigh}</p>
-                    <p className="weights">Average Weight – Female (in pounds)</p>
-                    {dogBreed.femaleWeightLow} to {dogBreed.femaleWeightHigh}
+                    <p>Average Weight In Pounds (lbs)</p>
+                    <p className="weights">Male:{' '}
+                    {dogBreed.maleWeightLow} to {dogBreed.maleWeightHigh}</p>
+                    <p className="weights">Female: {' '}
+                    {dogBreed.femaleWeightLow} to {dogBreed.femaleWeightHigh}</p>
                     <h3>Attributes</h3>
-                    <p>Shedding: {dogBreed.shedding}</p>
+                    <p className="prompt">Shedding:{dogBreed.shedding}</p>
                     <p>Blows Coat? {dogBreed.blowsCoat}</p>
                     <p>Professional Grooming Needed: {dogBreed.professionalGrooming}</p>
                     <p>Grooming Needs (brushing, combing, etc.): {dogBreed.grooming}</p>
@@ -34,7 +35,7 @@ export default class extends React.Component {
                     <p>Prey Drive (hunting, chasing, etc.): {dogBreed.preyDrive}</p>
                     <p>Barking/Vocality: {dogBreed.barking}</p>
                     <h3>Main Drives</h3>
-                   <p>{dogBreed.mainDrive}</p>
+                    <p>{dogBreed.mainDrive}</p>
                     <h3>Activities</h3>
                     <p>{dogBreed.activities}</p>
                 </section>
