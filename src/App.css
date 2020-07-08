@@ -1,8 +1,16 @@
 /*Main Content & Master Styles*/
 
-.main-content {
+.hero{
   text-align: center;
+  padding: 220px;
+}
+
+h1 {
   padding-top: 25px;
+}
+
+.hero p {
+  padding-bottom: 15px;
 }
 
 
@@ -15,10 +23,15 @@
 
 .breed-website {
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .weights{
   font-weight: 600;
+}
+
+.weight {
+  font-weight: 800;
 }
 
 .breed-box p {
@@ -32,6 +45,10 @@
 
 .prompt {
   font-weight: 800;
+}
+
+.breed-box h2 {
+  text-align: center;
 }
 
 
