@@ -21,13 +21,13 @@ export default class extends React.Component {
                 <section key={dogBreed._id} className="breed-box">
                     <h2>{dogBreed.breed}</h2>
                     <p className="breed-website"><a href={dogBreed.url} target="_blank" rel="noopener noreferrer">{dogBreed.breed}  Website</a></p>
-                    <h3>Attributes & Information</h3>
                     <p className="weight">Average Weight In Pounds (lbs)</p>
                     <p className="weights">Male:{' '}
                         {dogBreed.maleWeightLow} to {dogBreed.maleWeightHigh}</p>
                     <p className="weights">Female: {' '}
                         {dogBreed.femaleWeightLow} to {dogBreed.femaleWeightHigh}</p>
-                    <p className="prompt">Shedding:{dogBreed.shedding}</p>
+                    <h3>Attributes & Information</h3>
+                    <p className="prompt">Shedding: {dogBreed.shedding}</p>
                     <p>Blows Coat? {dogBreed.blowsCoat}</p>
                     <p>Professional Grooming Needed: {dogBreed.professionalGrooming}</p>
                     <p>Grooming Needs (brushing, combing, etc.): {dogBreed.grooming}</p>
@@ -38,6 +38,7 @@ export default class extends React.Component {
                     <p>Barking/Vocality: {dogBreed.barking}</p>         
                     <h3>Main Drives</h3>
                     <p>{dogBreed.mainDrive}</p>
+                    
                     <h3>Activities</h3>
                     <p>{dogBreed.activities}</p>
                 </section>
@@ -70,8 +71,7 @@ export default class extends React.Component {
         return (
             <div>
                 <span className="hero">
-                    <h1>All Dog Breeds</h1>
-                    <p>(Sorted in Alphabetical Order)</p>
+                    <h1>Find Your Perfect Dog Breed</h1>
                 </span>
                 <Loader
                     visible="true"
@@ -79,10 +79,10 @@ export default class extends React.Component {
                     color="#ff3312"
                     height={100}
                     width={100}
-                    timeout={1500} //3 secs
+                    timeout={1500}
                 />
-                <span className="dog-block">
-                    <div>{this.showAllBreeds()}</div>
+                <span >
+                    <div className="dog-block">{this.showAllBreeds()}</div>
                 </span>
             </div>
         );
