@@ -16,7 +16,7 @@ export default class extends React.Component {
 
 
     showAllBreeds = () => {
-        return this.state.dogBreeds.map((dogBreed) => {
+        return this.state.dogBreeds.map((dogBreed, i) => {
             return (
                 <section key={dogBreed._id} className="breed-box">
                     <h2>{dogBreed.breed}</h2>
@@ -35,12 +35,21 @@ export default class extends React.Component {
                     <p>Exercise Needs: {dogBreed.exercise}</p>
                     <p>Biddability (aka, Trainability): {dogBreed.biddability}</p>
                     <p>Prey Drive (hunting, chasing, etc.): {dogBreed.preyDrive}</p>
-                    <p>Barking/Vocality: {dogBreed.barking}</p>         
+                    <p>Barking/Vocality: {dogBreed.barking}</p>
                     <h3>Main Drives</h3>
-                    <p>{dogBreed.mainDrive}</p>
-                    
+                    <div>{Array.isArray(dogBreed.mainDrive) ? dogBreed.mainDrive.map((maindrive, k) => {
+                        return (
+                            <p key={`mainDrive-${i}-${k}`}>{maindrive}</p>
+                        )
+
+                    }) : <p>{dogBreed.mainDrive}</p>}</div>
+
                     <h3>Activities</h3>
-                    <p>{dogBreed.activities}</p>
+                    <div>{Array.isArray(dogBreed.activities) ? dogBreed.activities.map((activity, j) => {
+                        return (
+                            <p key={`activity-${i}-${j}`}>{activity}</p>
+                        )
+                    }) : <p>{dogBreed.activities}</p>}</div>
                 </section>
             )
         })
