@@ -12,7 +12,16 @@ export default class extends React.Component {
     state = {
         dogBreeds: [],
     }
-
+    showSimpleBreeds = () => {
+        return this.state.dogBreeds.map((dogBreed, i) => {
+            return (
+            <section key={dogBreed._id} className="simple-breed-box">
+            <h2>{dogBreed.breed}</h2>
+            <button>See Breed Info</button>
+            </section>
+            )
+        })
+    }
 
 
     showAllBreeds = () => {
@@ -41,9 +50,7 @@ export default class extends React.Component {
                         return (
                             <p key={`mainDrive-${i}-${k}`}>{maindrive}</p>
                         )
-
                     }) : <p>{dogBreed.mainDrive}</p>}</div>
-
                     <h3>Activities</h3>
                     <div>{Array.isArray(dogBreed.activities) ? dogBreed.activities.map((activity, j) => {
                         return (
@@ -88,9 +95,10 @@ export default class extends React.Component {
                     color="#ff3312"
                     height={100}
                     width={100}
-                    timeout={1500}
+                    timeout={2200}
                 />
-                <span >
+                <span>
+                    <div className="simple-square">{this.showSimpleBreeds()}</div>
                     <div className="dog-block">{this.showAllBreeds()}</div>
                 </span>
             </div>
